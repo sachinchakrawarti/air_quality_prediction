@@ -60,3 +60,6 @@ models/metrics.json
 
 # Datasets
 dataset/*.csv
+
+
+*.pdf
