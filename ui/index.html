@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AQI Predictor — Indian Cities</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌫️ AQI Predictor</h1>
+      <p class="subtitle">Random Forest Regression — Indian Cities (2015–2020)</p>
+    </header>
+
+    <main class="grid">
+      <!-- INPUT PANEL -->
+      <section class="panel input-panel">
+        <h2>Input</h2>
+
+        <label for="city">City</label>
+        <select id="city">
+          <option value="Delhi">Delhi</option>
+          <option value="Bangalore">Bangalore</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Hyderabad">Hyderabad</option>
+        </select>
+
+        <label for="season">Season</label>
+        <select id="season">
+          <option value="winter">Winter (Dec–Feb)</option>
+          <option value="summer">Summer (Mar–May)</option>
+          <option value="monsoon">Monsoon (Jun–Sep)</option>
+          <option value="post-monsoon">Post-Monsoon (Oct–Nov)</option>
+        </select>
+
+        <div id="sliders">
+          <!-- sliders injected by script.js -->
+        </div>
+
+        <button id="predictBtn">🔍 Predict AQI</button>
+        <p id="status" class="status"></p>
+      </section>
+
+      <!-- OUTPUT PANEL -->
+      <section class="panel output-panel">
+        <h2>Output</h2>
+
+        <div id="resultBox" class="result-box hidden">
+          <div class="aqi-value">
+            <span id="aqiNumber">—</span>
+          </div>
+          <div id="aqiCategory" class="aqi-category">—</div>
+
+          <div class="gauge">
+            <div class="gauge-track">
+              <div class="gauge-segment seg-good"></div>
+              <div class="gauge-segment seg-satisfactory"></div>
+              <div class="gauge-segment seg-moderate"></div>
+              <div class="gauge-segment seg-poor"></div>
+              <div class="gauge-segment seg-verypoor"></div>
+              <div class="gauge-segment seg-severe"></div>
+              <div id="gaugeMarker" class="gauge-marker"></div>
+            </div>
+            <div class="gauge-labels">
+              <span>0</span><span>50</span><span>100</span><span>200</span>
+              <span>300</span><span>400</span><span>500</span>
+            </div>
+          </div>
+
+          <h3>Top contributing pollutants (SHAP)</h3>
+          <div id="shapBars" class="shap-bars"></div>
+        </div>
+
+        <p id="placeholder" class="placeholder">
+          Set the inputs on the left and click <b>Predict AQI</b>.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <span>Model: Random Forest Regression · Dataset: Kaggle Air Quality India (2015–2020)</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

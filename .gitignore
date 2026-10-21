@@ -1,0 +1,58 @@
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ============================================================
+# Virtual environments
+# ============================================================
+venv/
+env/
+ENV/
+.venv/
+.conda/
+.conda-env/
+
+# ============================================================
+# Jupyter Notebook
+# ============================================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+notebook/.ipynb_checkpoints/
+# Uncomment the next line if you want to commit the notebook but not its outputs
+# notebook/notebook.ipynb
+
+# ============================================================
+# ML models (regenerate with: python src/train.py)
+# ============================================================
+models/*.pkl
+models/*.joblib
+models/*.h5
+models/*.pt
+models/*.onnx
+models/metrics.json
+
+# Keep the folder itself (so the repo has models/ when cloned)
+!models/.gitkeep
+
+# ============================================================
