@@ -56,3 +56,7 @@ models/metrics.json
 !models/.gitkeep
 
 # ============================================================
+
+
+# Datasets
+dataset/*.csv
